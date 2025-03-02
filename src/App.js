@@ -1,17 +1,25 @@
-import React, { useState } from "react";
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css"; // Import default styles
+import logo from './logo.svg';
+import './App.css';
 
-const App = () => {
-  const [date, setDate] = useState(new Date());
-
+function App() {
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <h1>My React Calendar</h1>
-      <Calendar onChange={setDate} value={date} />
-      <p>Selected Date: {date.toDateString()}</p>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
-};
+}
 
 export default App;
